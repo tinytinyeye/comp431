@@ -15,25 +15,23 @@
 
 <form id="orderForm" method="GET" action="#">
 	<p>Name</p>
-	<input type="text" name="name">
+	<input type="text" name="name" required>
 	<p>Address: #### Street Name ...</p>
-	<input type="text" name="address">
+	<input type="text" name="address" required>
 	<p>Phone number: 123-123-1234</p>
-	<input type="tel" name="phone">
+	<input type="tel" name="phone" required>
 	<p>Pizza size</p>
-	<input type="radio" name="size" value="Large">Large
-	<input type="radio" name="size" value="Medium">Medium
-	<input type="radio" name="size" value="Small">Small
+	<input type="radio" name="size" value="Large" required>Large
+	<input type="radio" name="size" value="Medium" required>Medium
+	<input type="radio" name="size" value="Small" required>Small
 	<p>Pizza Toppings</p>
 	<input type="checkbox" name="topping" value="sausage">Sausage
 	<input type="checkbox" name="topping" value="pepperoni">Pepperoni
 	<input type="checkbox" name="topping" value="olives">Olives
 	<input type="checkbox" name="topping" value="anchovies">Anchovies
 	<input type="checkbox" name="topping" value="onions">Onions<br><br>
-	<input type="submit" value="Place Order">
+	<input type="submit" value="Place Order" onclick="return validate(this.parent)">
 	<input type="reset" value="Clear">
-
-	
 </form>
 
 </body>
