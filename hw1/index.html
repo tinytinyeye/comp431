@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Qixuan Huang">
+</head>
+
+<body>
+
+<h1>User Registration</h1>
+
+<br/>
+<img src="http://www.thecrazyfacts.com/wp-content/uploads/2016/02/16525-illustration-of-a-slice-of-pizza-with-toppings-pv.png" width="400px" title="Pizza">
+
+<form id="regForm" method="GET" action="#">
+	<p>Account name:</p>
+	<input type="text" name="account" required>
+	<p>Display name:</p>
+	<input type="text" name="name">
+	<p>Email address:</p>
+	<input type="email" name="email" required>
+	<p>Phone number:</p>
+	<input type="tel" name="phone" required>
+	<p>Date of birth:</p>
+	<input type="date" name="birthday" required>
+	<p>Zipcode:</p>
+	<input type="number" name="zipcode" required>
+	<p>Password:</p>
+	<input type="password" name="pwd" required>
+	<p>Password confirmation:</p>
+	<input type="password" name="pwdConfirm" required><br>
+	<input type="submit" value="Submit" onclick="return validate(this.parent)">
+	<input type="reset" value="Clear">
+</form>
+
+<script>
+function validate(form) {
+	if (!form) {
+		form = document.getElementById("regForm")
+	}
+	console.log(form)
+	var email = form.email.value
+	var phone = form.phone.value
+	// Validate email address
+	if (!(email.match(/([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})/g))){
+		window.alert("Please enter a valid email address.")
+		return false
+	// Validate phone number
+	} else if (!(phone.match(/\d{3}-\d{3}-\d{4}/g))) {
+		window.alert("Please enter a valid phone number.")
+		return false
+	} else {
+		return true
+	}
+}
+</script>
+
+</body>
+</html>
