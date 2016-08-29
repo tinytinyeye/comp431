@@ -40,19 +40,27 @@ function validate(form) {
 		form = document.getElementById("regForm")
 	}
 	console.log(form)
-	var email = form.email.value
-	var phone = form.phone.value
 	// Validate email address
-	if (!(email.match(/([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})/g))){
+	if (!validEmail(form)) {
 		window.alert("Please enter a valid email address.")
 		return false
 	// Validate phone number
-	} else if (!(phone.match(/\d{3}-\d{3}-\d{4}/g))) {
+	} else if (!validPhone(form)) {
 		window.alert("Please enter a valid phone number.")
 		return false
 	} else {
 		return true
 	}
+}
+
+function validEmail(form) {
+	var email = form.email.value
+	return email.match(/([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})/g)
+}
+
+function validPhone(form) {
+	var phone = form.phone.value
+	return phone.match(/\d{3}-\d{3}-\d{4}/g)
 }
 </script>
 
