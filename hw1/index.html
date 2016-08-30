@@ -10,9 +10,6 @@
 
 <h1>User Registration</h1>
 
-<br/>
-<img src="http://www.thecrazyfacts.com/wp-content/uploads/2016/02/16525-illustration-of-a-slice-of-pizza-with-toppings-pv.png" width="400px" title="Pizza">
-
 <form id="regForm" method="GET" action="formProcesser.html">
 	<p>Account name:</p>
 	<input type="text" name="account" required>
@@ -29,35 +26,36 @@
 	<p>Password:</p>
 	<input type="password" name="pwd" required>
 	<p>Password confirmation:</p>
-	<input type="password" name="pwdConfirm" required><br>
+	<input type="password" name="pwdConfirm" required></br></br>
 	<input type="hidden" name="timestamp" id="ts" value="">
 	<input type="submit" value="Submit" onclick="return validate(this.parent)" >
 	<input type="reset" value="Clear">
 </form>
 
 <script>
+// Function for validation
 function validate(form) {
 	if (!form) {
 		form = document.getElementById("regForm")
 	}
 	console.log(form)
 	
-	if (!validAccount(form)) { // Validate account name
+	if (!validAccount(form)) { // Validate account name.
 		window.alert("Account name can only be upper or lower case letters and numbers, but may not start with a number.")
 		return false
-	} else if (!validEmail(form)) { // Validate email address
+	} else if (!validEmail(form)) { // Validate email address.
 		window.alert("Please enter a valid email address.")
 		return false
-	} else if (!validPhone(form)) { // Validate phone number
+	} else if (!validPhone(form)) { // Validate phone number.
 		window.alert("Please enter a valid phone number.")
 		return false
-	} else if (!validBirthday(form)) { // Validate birthday
+	} else if (!validBirthday(form)) { // Validate birthday.
 		window.alert("You need to be at least 18 to register.")
 		return false
-	} else if (!validZipcode(form)) { // Validate zipcode
+	} else if (!validZipcode(form)) { // Validate zipcode.
 		window.alert("Please enter a valid zipcode.")
 		return false
-	} else if (!confirmPassword(form)) { // Validate password
+	} else if (!confirmPassword(form)) { // Validate password.
 		window.alert("Please enter the same password for confirmation.")
 		return false
 	} else {
@@ -84,7 +82,7 @@ function validBirthday(form) {
 	var birthday = new Date(Date.parse(form.birthday.value))
 	var today = new Date()
 	var cutoffDate = new Date()
-	cutoffDate.setFullYear(today.getFullYear() - 18, today.getMonth(), today.getDate())
+	cutoffDate.setFullYear(today.getFullYear() - 18, today.getMonth(), today.getDate()) // Compute cutoff date for age validation.
 	if (birthday < cutoffDate) {
 		return true
 	} else {
@@ -108,6 +106,7 @@ function confirmPassword(form) {
 }
 
 function getTimeStamp(event) {
+	// Save timestamp in milliseconds.
 	document.getElementById("ts").value = Date.parse(new Date(Date.now()))
 }
 </script>

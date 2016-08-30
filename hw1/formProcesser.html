@@ -49,17 +49,29 @@
 	
 <script>
 
+// Decode URI and extract query parameter.
 function decode() {
+	// Extract parameter array.
 	var parms = decodeURIComponent(location.search.substring(1)).split("&")
+	// Extract account name
 	document.getElementById("account").innerHTML = parms[0].split("=")[1]
+	// Extract display name
 	document.getElementById("name").innerHTML = parms[1].split("=")[1]
+	// Extract email address
 	document.getElementById("email").innerHTML = parms[2].split("=")[1]
+	// Extract phone number
 	document.getElementById("phone").innerHTML = parms[3].split("=")[1]
+	// Extract date of birth
 	document.getElementById("birthday").innerHTML = parms[4].split("=")[1]
+	// Extract zipcode
 	document.getElementById("zipcode").innerHTML = parms[5].split("=")[1]
+	// Extract password
 	document.getElementById("pwd").innerHTML = parms[6].split("=")[1]
+	// Extract password confirmation
 	document.getElementById("pwdConfirm").innerHTML = parms[7].split("=")[1]
+	// Convert timestamp from milliseconds to date object
 	var d = new Date(parseInt(parms[8].split("=")[1]))
+	// Convert date object to string
 	document.getElementById("ts").innerHTML = d.toString()
 }
 
