@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Qixuan Huang">
+</head>
+
+<body onload="decode()">
+
+<table style="width:100%">	
+	<tr>
+		<td>Account name</td>
+		<td id="account"></td>
+	</tr>
+	<tr>
+		<td>Display name</td>
+		<td id="name"></td>
+	</tr>
+	<tr>
+		<td>Email address</td>
+		<td id="email"></td>
+	</tr>
+	<tr>
+		<td>Phone number</td>
+		<td id="phone"></td>
+	</tr>
+	<tr>
+		<td>Date of birth</td>
+		<td id="birthday"></td>
+	</tr>
+	<tr>
+		<td>Zipcode</td>
+		<td id="zipcode"></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td id="pwd"></td>
+	</tr>
+	<tr>
+		<td>Password confirmation</td>
+		<td id="pwdConfirm"></td>
+	</tr>
+	<tr>
+		<td>Timestamp</td>
+		<td id="ts"></td>
+	</tr>
+</table>
+	
+<script>
+
+function decode() {
+	var parms = decodeURIComponent(location.search.substring(1)).split("&")
+	document.getElementById("account").innerHTML = parms[0].split("=")[1]
+	document.getElementById("name").innerHTML = parms[1].split("=")[1]
+	document.getElementById("email").innerHTML = parms[2].split("=")[1]
+	document.getElementById("phone").innerHTML = parms[3].split("=")[1]
+	document.getElementById("birthday").innerHTML = parms[4].split("=")[1]
+	document.getElementById("zipcode").innerHTML = parms[5].split("=")[1]
+	document.getElementById("pwd").innerHTML = parms[6].split("=")[1]
+	document.getElementById("pwdConfirm").innerHTML = parms[7].split("=")[1]
+	document.getElementById("ts").innerHTML = 
+		parms[8].split("=")[1].replace(/\+/g, " ")
+}
+
+</script>
+
+</body>
+
+</html>
