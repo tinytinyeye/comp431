@@ -108,10 +108,7 @@ function confirmPassword(form) {
 }
 
 function getTimeStamp(event) {
-	// form.timestamp.value = new Date(Date.now())
-	// window.alert(form.timestamp.value)
-	// window.alert(new Date(Date.now()))
-	document.getElementById("ts").value = new Date(Date.now())
+	document.getElementById("ts").value = Date.parse(new Date(Date.now()))
 }
 </script>
 

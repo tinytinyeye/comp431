@@ -59,8 +59,8 @@ function decode() {
 	document.getElementById("zipcode").innerHTML = parms[5].split("=")[1]
 	document.getElementById("pwd").innerHTML = parms[6].split("=")[1]
 	document.getElementById("pwdConfirm").innerHTML = parms[7].split("=")[1]
-	document.getElementById("ts").innerHTML = 
-		parms[8].split("=")[1].replace(/\+/g, " ")
+	var d = new Date(parseInt(parms[8].split("=")[1]))
+	document.getElementById("ts").innerHTML = d.toString()
 }
 
 </script>
