@@ -6,7 +6,7 @@
 	<meta name="author" content="Qixuan Huang">
 </head>
 
-<body onload="getTimeStamp(event)">
+<body onload="getTimeStamp()">
 
 <h1>User Registration</h1>
 
@@ -105,9 +105,9 @@ function confirmPassword(form) {
 	}
 }
 
-function getTimeStamp(event) {
+function getTimeStamp() {
 	// Save timestamp in milliseconds.
-	document.getElementById("ts").value = Date.parse(new Date(Date.now()))
+	document.getElementById("ts").value = Date.now()
 }
 </script>
 
