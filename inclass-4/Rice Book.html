@@ -95,6 +95,10 @@ input[type=button] {
     background-color: rgba(240, 255, 200, 0.3)
 }
 
+input[type=button]:click {
+	background-color: white;
+}
+
 </style>
 
 </head>
@@ -103,7 +107,7 @@ input[type=button] {
 <h1>Rice Book</h1>
 
 <input type="text" placeholder="username" id="username">
-<input type="button" value="Login" id="login">
+<input type="button" value="Login" id="login"></br>
 
 <div id="shareDiv" style="display: none">
 	<input id="shareText" type="text" placeholder="share something" width="200">
