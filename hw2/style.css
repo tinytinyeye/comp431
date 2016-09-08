@@ -3,20 +3,20 @@ img {
     /*display: inline-block;*/
 }
 
-#users {
+#cards {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
     height: 600px;
 }
 
-#users td, #users th {
-    border: 1px solid #ddd;
+#cards td, #cards th {
+    border: 10px solid rgba(240, 255, 200, 0.3);
 }
 
 /*#users tr:nth-child(even){background-color: #f2f2f2;}*/
 
-#users td:hover {background-color: #ddd;}
+/*#cards td:hover {background-color: #ddd;}*/
 
 .card {
     width: 500px;
@@ -33,9 +33,38 @@ img {
     background-color: rgba(247, 218, 249, 0.3);
     position: relative;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
-.btnStop:click {
-    background-color: rgba(240, 255, 200, 0.3);
+.btnProfile {
+    padding: 12px 20px;
+    margin: 15px 10px 15px 0;
+    border: 5px rgba(247, 218, 249, 0.3);
+    /*width: 100%;*/
+    background-color: rgba(247, 218, 249, 0.3);
+    /*position: relative;*/
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+input {
+    /*width: 100%;*/
+    padding: 12px 20px;
+    margin: 15px 10px 15px 0;
+    box-sizing: border-box;
+    border: 5px solid rgba(247, 218, 249, 0.5);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: rgba(240, 255, 200, 0.3)
+    font-size: 18px;
+}
+
+input:focus {
+    border: 5px solid rgb(247, 218, 249);
+}
+
+label {
+    font-size: 20px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }

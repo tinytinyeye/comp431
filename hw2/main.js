@@ -1,40 +1,51 @@
-// var imgCardList = ["user2", "user3", "user6", "user7"];
+// Contents for display
+var contents = ["<img src='http://goo.gl/bt1Y2N' title='jinjya'><br>This is the most famous place in Kyoto",
+			 	"<img src='http://goo.gl/WyFqUc' title='bamboo'>"]
 
-var user1 = {displayName: "Eddie",
-			 emailAddress: "abc@aol.com",
-			 phoneNumber: "315-244-6088",
-			 zipcode: "77065",
-			 password: "abc",
-			 passwordConfirmation: "abc",
-			 contents: ["<img src='http://goo.gl/bt1Y2N' title='jinjya'><br>This is the most famous place in Kyoto",
-			 			"<img src='http://goo.gl/WyFqUc' title='bamboo'>"]};
+// Array to store interval id.
+var interval = [0, 0, 0, 0, 0, 0, 0, 0];
 
+// Store reference to all cards on html.
+var cards;
 
+// Number of html elements available for display.
+var length = contents.length;
 
-// This function is triggered with onload event 
-// and give each card a random interval.
-function initSlideInterval() {
-	// imgCardList.forEach(setSlideInterval(user))
-	document.getElementById("user1").innerHTML = user1.contents[0];
-	user1.interval = setInterval(slideUpdate, 1000, "user1", user1.contents);
-	// document.getElementById("user4").innerHTML = "Hello World";
+window.onload = function() {
+	cards = document.getElementsByClassName("card");
+	// Initial all cards.
+	Array.prototype.forEach.call(cards, init);
 }
 
-function update(btnUser) {
-	if (document.getElementById(btnUser).value == "Stop") {
-		document.getElementById(btnUser).value = "Start";
+// This function initialize intervals and contents for each card.
+// It also add event listener to each button.
+function init(item, index) {
+	item.innerHTML = contents[getRandomInt(0, length - 1)];
+	interval[index] = setInterval(slideUpdate, getRandomInt(1, 5) * 1000, item);
+	var btn = "btnCard" + (index + 1);
+	document.getElementById(btn).addEventListener("click", function() {update(btn)})
+}
 
+
+// This function is triggered by the button of each card and
+// decides if the contents in the card needs to change.
+function update(btnCard) {
+	// Obtain index of card
+	var i = btnCard.substring(7) - 1;
+	// If the content is changing
+	if (document.getElementById(btnCard).value == "Stop") {
+		document.getElementById(btnCard).value = "Start";
+		clearInterval(interval[i]);
+	} else {
+		document.getElementById(btnCard).value = "Stop";
+		interval[i] = setInterval(slideUpdate, getRandomInt(1, 5) * 1000, cards[i]);
 	}
 }
 
-function setSlideInterval(user) {
-
-}
-
 // This function will change the content
-// of the card for a given user.
-function slideUpdate(user, contents) {
-	document.getElementById(user).innerHTML = contents[getRandomInt(0, 1)]
+// of a given card.
+function slideUpdate(card) {
+	card.innerHTML = contents[getRandomInt(0, length - 1)]
 }
 
 /**
