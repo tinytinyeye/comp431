@@ -1,6 +1,56 @@
 // Contents for display
-var contents = ["<img src='http://goo.gl/bt1Y2N' title='jinjya'><br>This is the most famous place in Kyoto",
-			 	"<img src='http://goo.gl/WyFqUc' title='bamboo'>"]
+var contents = ["Lorem ipsum dolor sit amet, consectetur adipiscing\
+			 	 elit, sed do eiusmod tempor incididunt ut labore et\
+			 	 dolore magna aliqua. Ut enim ad minim veniam, quis \
+			 	 nostrud exercitation ullamco laboris nisi ut aliquip\
+			 	 ex ea commodo consequat. Duis aute irure dolor in \
+			 	 reprehenderit in voluptate velit esse cillum dolore \
+			 	 eu fugiat nulla pariatur. Excepteur sint occaecat cup\
+			 	 idatat non proident, sunt in culpa qui officia deserun\
+			 	 t mollit anim id est laborum.",
+			 	 "Aenean eget tortor et ipsum convallis convallis non si\
+			 	 t amet massa. Donec nec vestibulum sem. Sed et est moles\
+			 	 tie, congue magna vitae, aliquet lacus. Ut in scelerisque\
+			 	 ante. Curabitur ultricies est id consectetur suscipit. In\
+			 	 ut lectus congue, dapibus lectus nec, hendrerit augue. Nu\
+			 	 llam dignissim pretium dictum. Fusce maximus condimentum o\
+			 	 rci at aliquet. Donec dictum eget leo non vehicula. Morbi \
+			 	 consectetur dictum eros in rutrum. Sed quis rhoncus risus.",
+			 	 "Curabitur quis malesuada neque. Nulla quis mi congue, aucto\
+			 	 r ante id, cursus nunc. Vivamus dui nisl, pharetra quis risus\
+			 	 eu, mattis congue mi. In pellentesque hendrerit eros eget port\
+			 	 a. Praesent ut metus suscipit, aliquam arcu a, euismod mauris.\
+			 	 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis \
+			 	 rhoncus, dui sed porttitor placerat, felis mauris hendrerit tor\
+			 	 tor, non aliquet metus mi non ligula. Nunc velit purus, hendrerit\
+			 	 ac pellentesque at, scelerisque non justo. Fusce ligula ex, sagi\
+			 	 ttis sit amet justo ac, scelerisque facilisis lectus. Ut in effi\
+			 	 citur turpis. Mauris scelerisque dapibus ligula, vel molestie ris\
+			 	 us viverra a. Donec in ultrices mauris. Nunc vestibulum quam mauri\
+			 	 s, sed sollicitudin quam eleifend fermentum.",
+			 	 "<img src='http://goo.gl/bt1Y2N' title='jinjya'>\
+			 	 </br>This is the most famous place in Kyoto",
+			 	 "<img src='http://goo.gl/WyFqUc' title='bamboo'>",
+			 	 "<img src='http://goo.gl/lHk1uZ' title='street'>",
+			 	 "<img src='http://goo.gl/Cz9nZw' title='sakura'>",
+			 	 "<img src='http://goo.gl/l8vlyU' title='redLeaf'>",
+			 	 "<img src='http://goo.gl/684zvh' title='kimono'>",
+			 	 "<img src='http://goo.gl/mj9WpW' title='take'>",
+			 	 "<img src='http://goo.gl/XkQAMk' title='buddism'>",
+			 	 "<img src='http://goo.gl/f5NBzz' title='hanami'>",
+			 	 "<img src='http://goo.gl/jBAj9O' title='nigiyaka'>",
+			 	 "<img src='http://goo.gl/jDe3VK' title='mizuumi'>",
+			 	 "<img src='http://goo.gl/X6m34O' title='tokyoTower'>\
+			 	 </br>This is Tokyo",
+			 	 "<img src='http://goo.gl/HrPEc2' title='tokyoJou'>",
+			 	 "<img src='http://goo.gl/8eilH4' title='shinjuku'>",
+			 	 "<img src='http://goo.gl/rvrY9H' title='rain'>\
+			 	 </br>Raining in Tokyo.",
+			 	 "<img src='http://goo.gl/EKRHsx' title='night'>",
+			 	 "<img src='http://goo.gl/G63yi6' title='tokyoeki'>",
+			 	 "<img src='http://goo.gl/kJNNkh' title='shinjuku2'>",
+			 	 "<img src='http://goo.gl/tktIlY' title='iseidan'>",
+			 	 "<img src='http://goo.gl/xqL6ZU' title='gyoen'>"]
 
 // Array to store interval id.
 var interval = [0, 0, 0, 0, 0, 0, 0, 0];

@@ -4,7 +4,7 @@ var user = {displayName: "Eddie",
 			phoneNumber: "315-244-6088",
 			zipcode: "77065",
 			password: "abc",
-			passwordConfirmation: "abc"};
+			pwdConfirm: "abc"};
 
 window.onload = loadProfile;
 
@@ -39,36 +39,66 @@ function validate() {
 
 function validEmail() {
 	var email = document.getElementById("emailAddress").value;
-	return email.match(/([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})/g)
+	if (email != "") {
+		return email
+			.match(/([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})/g);
+	} else {
+		return true;
+	}
 }
 
 function validPhone() {
 	var phone = document.getElementById("phoneNumber").value;
-	return phone.match(/\d{3}-\d{3}-\d{4}/g)
+	if (phone != "") {
+		return phone.match(/\d{3}-\d{3}-\d{4}/g);
+	} else {
+		return true;
+	}
 }
 
 function validZipcode() {
 	var zipcode = document.getElementById("zipcode").value;
-	return zipcode.match(/^\d{5}(-\d{4})?$/)
+	if (zipcode != "") {
+		return zipcode.match(/^\d{5}(-\d{4})?$/);
+	} else {
+		return true;
+	}
 }
 
 function confirmPassword() {
 	var pwd = document.getElementById("password").value;
 	var pwdConfirm = document.getElementById("pwdConfirm").value;
-	if (pwd == pwdConfirm) {
-		return true
+	if (pwd != "" && pwdConfirm != "") {
+		if (pwd == pwdConfirm) {
+			return true
+		} else {
+			return false
+		}
 	} else {
-		return false
+		return true;
 	}
 }
 
 function updateProfile() {
-	user.displayName = document.getElementById("emailAddress").value;
-	user.phoneNumber = document.getElementById("phoneNumber").value;
-	user.zipcode = document.getElementById("zipcode").value;
-	user.password = document.getElementById("password").value;
-	user.pwdConfirm = document.getElementById("pwdConfirm").value;
+	var updateMsg = "";
+	var input = "";
+	Object.keys(user).forEach(function(key) {
+		input = document.getElementById(key).value;
+		if (user[key] != input && input != "") {
+			updateMsg += key + " is changed from " + 
+						 user[key] + " to " + input + ".\n"
+			user[key] = input;
+		}
+	});
+	window.alert(updateMsg);
 	loadProfile();
+	clearInput();
+}
+
+function clearInput() {
+	Object.keys(user).forEach(function(key) {
+		document.getElementById(key).value = "";
+	});
 }
 
 function returnHome() {
