@@ -103,16 +103,19 @@ function updateProfile() {
 	clearInput();
 }
 
+// This function clear all the input fields in profile page.
 function clearInput() {
 	Object.keys(user).forEach(function(key) {
 		document.getElementById(key).value = "";
 	});
 }
 
+// This function returns to home page.
 function returnHome() {
 	window.location.replace("main.html")
 }
 
+// This function reveals hidden password
 function revealPwd() {
 	document.getElementById("currentPassword").innerHTML = user.password;
 	document.getElementById("btnReveal").style.display = "none";
