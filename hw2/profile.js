@@ -8,6 +8,8 @@ var user = {displayName: "Eddie",
 
 window.onload = loadProfile;
 
+// This function displays user's current information
+// on the side of input field.
 function loadProfile() {
 	document.getElementById("currentDisplayName").innerHTML = user.displayName;
 	document.getElementById("currentEmailAddress").innerHTML = user.emailAddress;
@@ -15,6 +17,7 @@ function loadProfile() {
 	document.getElementById("currentZipcode").innerHTML = user.zipcode;
 	document.getElementById("btnUpdate").addEventListener("click", validate);
 	document.getElementById("btnReturn").addEventListener("click", returnHome);
+	document.getElementById("btnReveal").addEventListener("click", revealPwd);
 }
 
 // Function for validation
@@ -70,15 +73,20 @@ function confirmPassword() {
 	var pwdConfirm = document.getElementById("pwdConfirm").value;
 	if (pwd != "" && pwdConfirm != "") {
 		if (pwd == pwdConfirm) {
-			return true
+			return true;
 		} else {
-			return false
+			return false;
 		}
+	} else if ((pwd == "" && pwdConfirm != "") || 
+			   (pwd != "" && pwdConfirm == "")) {
+		return false;
 	} else {
 		return true;
 	}
 }
 
+// This function updates the profile info
+// with user's input.
 function updateProfile() {
 	var updateMsg = "";
 	var input = "";
@@ -103,4 +111,9 @@ function clearInput() {
 
 function returnHome() {
 	window.location.replace("main.html")
+}
+
+function revealPwd() {
+	document.getElementById("currentPassword").innerHTML = user.password;
+	document.getElementById("btnReveal").style.display = "none";
 }

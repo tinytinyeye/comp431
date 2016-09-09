@@ -2,8 +2,8 @@ img {
     width: 100%;
 }
 
+/* Styles for text input */
 input {
-    /*width: 100%;*/
     padding: 12px 20px;
     margin: 15px 10px 15px 0;
     box-sizing: border-box;
@@ -17,7 +17,7 @@ input {
 
 input:focus {
     border: 5px solid rgb(247, 218, 249);
-    background-color: rgba(240, 255, 200, 0.6)
+    background-color: rgba(240, 255, 200, 0.3)
 }
 
 label {
@@ -36,12 +36,7 @@ label {
     border: 10px solid rgba(240, 255, 200, 0.3);
 }
 
-/*#users tr:nth-child(even){background-color: #f2f2f2;}*/
-
-/*#cards td:hover {background-color: rgba(196, 232, 253, 0.5);}*/
-
 #profile {
-    /*text-align: center;*/
     font-size: 20px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
@@ -49,10 +44,13 @@ label {
 .card {
     width: 500px;
     height: 400px;
-    /*padding: 10px;*/
-    /*margin: 0px 0px;*/
 }
 
+.profile {
+    background-color: rgba(196, 232, 253, 0.3);
+}
+
+/* Styles for buttons in main page */
 .btnStop {
     padding: 20px 20px;
     margin: 0;
@@ -66,16 +64,15 @@ label {
 
 .btnStop:hover {
     background-color: rgba(247, 218, 249, 0.3);
-    
+
 }
 
+/* Styles for buttons in profile page */
 .btnProfile {
     padding: 12px 20px;
     margin: 15px 10px 15px 0;
     border: 5px rgba(247, 218, 249, 0.3);
-    /*width: 100%;*/
     background-color: rgba(247, 218, 249, 0.3);
-    /*position: relative;*/
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     font-size: 14px;
 }

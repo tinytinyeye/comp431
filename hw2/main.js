@@ -17,17 +17,18 @@ var contents = ["Lorem ipsum dolor sit amet, consectetur adipiscing\
 			 	 rci at aliquet. Donec dictum eget leo non vehicula. Morbi \
 			 	 consectetur dictum eros in rutrum. Sed quis rhoncus risus.",
 			 	 "Curabitur quis malesuada neque. Nulla quis mi congue, aucto\
-			 	 r ante id, cursus nunc. Vivamus dui nisl, pharetra quis risus\
-			 	 eu, mattis congue mi. In pellentesque hendrerit eros eget port\
-			 	 a. Praesent ut metus suscipit, aliquam arcu a, euismod mauris.\
-			 	 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis \
-			 	 rhoncus, dui sed porttitor placerat, felis mauris hendrerit tor\
-			 	 tor, non aliquet metus mi non ligula. Nunc velit purus, hendrerit\
-			 	 ac pellentesque at, scelerisque non justo. Fusce ligula ex, sagi\
-			 	 ttis sit amet justo ac, scelerisque facilisis lectus. Ut in effi\
-			 	 citur turpis. Mauris scelerisque dapibus ligula, vel molestie ris\
-			 	 us viverra a. Donec in ultrices mauris. Nunc vestibulum quam mauri\
-			 	 s, sed sollicitudin quam eleifend fermentum.",
+			 	 r ante id, cursus nunc. Vivamus dui nisl, pharetra quis ris\
+			 	 useu, mattis congue mi. In pellentesque hendrerit eros eget \
+			 	 port a. Praesent ut metus suscipit, aliquam arcu a, euismod \
+			 	 mauris. Lorem ipsum dolor sit amet, consectetur adipiscing el\
+			 	 it. Duis rhoncus, dui sed porttitor placerat, felis mauris he\
+			 	 ndrerit tortor, non aliquet metus mi non ligula. Nunc velit \
+			 	 purus, hendreritac pellentesque at, scelerisque non justo. \
+			 	 Fusce ligula ex, sagittis sit amet justo ac, scelerisque faci\
+			 	 lisis lectus. Ut in efficitur turpis. Mauris scelerisque dapi\
+			 	 bus ligula, vel molestie risus viverra a. Donec in ultrices \
+			 	 mauris. Nunc vestibulum quam mauris, sed sollicitudin quam \
+			 	 eleifend fermentum.",
 			 	 "<img src='http://goo.gl/bt1Y2N' title='jinjya'>\
 			 	 </br>This is the most famous place in Kyoto",
 			 	 "<img src='http://goo.gl/WyFqUc' title='bamboo'>",
