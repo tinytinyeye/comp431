@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome to Ricebook</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Qixuan Huang">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<br>
+			<!-- Search area -->
+			<div class="col-xs-10" id="searchBg">
+				<input type="text" class="form-control input-lg" id="searchFld">
+			</div>
+			<div class="col-xs-2">
+				<button type="button" class="btn btn-info btn-block" id="btnSearch">
+      				<span class="glyphicon glyphicon-search"></span> Search
+    			</button>
+    		</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-sm-8">
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="row">
+
+							<!-- Imgae upload -->
+							<div class="col-sm-2">
+								<a href="#" class="btn btn-info btn-lg" id="imgUpload">
+          							<span class="glyphicon glyphicon-camera"></span>
+        						</a>
+							</div>
+							<!-- Post input -->
+							<div class="col-sm-10">
+								<div class="form-group" id="postInput">
+  									<textarea class="form-control" rows="2" id="post"></textarea>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- Control area for new post -->
+						<div class="row">
+							
+							<div class="col-sm-6">
+								<div class="form-group">
+          							<input type="reset" class="btn btn-warning btn-block" value="Cancel" id="btnCancel">
+        						</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="form-group">
+          							<input type="submit" class="btn btn-success btn-block" value="Post" id="btnPost">
+        						</div>	
+							</div>							
+
+						</div>
+					</div>
+				</div>
+
+      			<div class="row">
+        			<div class="col-sm-6" style="background-color:lightcyan;">card1</div>
+        			<div class="col-sm-6" style="background-color:lightgray;">card2</div>
+      			</div>
+
+      			<div class="row">
+        			<div class="col-sm-6" style="background-color:lightcyan;">card3</div>
+        			<div class="col-sm-6" style="background-color:lightgray;">card4</div>
+      			</div>
+
+    		</div>
+
+    		
+    		<!-- Navigation area -->
+    		<div class="col-sm-4">
+    			<br>
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<!-- Logout and profile buttons -->
+    					<div class="row">
+    						<div class="col-sm-6">
+    						<a href="#" class="btn btn-danger btn-block" id="btnLogout">
+          						<span class="glyphicon glyphicon-log-out"></span> Logout
+        					</a>
+    						</div>
+        					<div class="col-sm-6">
+        					<a href="#" class="btn btn-info btn-block" id="btnProfile">
+          						<span class="glyphicon glyphicon-user"></span> Profile
+        					</a>
+        					</div>
+    					</div>
+
+    					<!-- Profile info -->
+    					<div class="row">
+    						<div class="col-sm-12">
+    							<img src="profile.jpg" class="img-circle center-block" width="200px" height="200px">
+    							<div class="container">
+    								<h3>Frankie Huang</h3>
+    								<h5>Life is great!</h5>
+    							</div></br>
+    							<div class="form-group" id="statusUpdate">
+  									<textarea class="form-control" rows="2" id="statusUp"></textarea>
+								</div>
+								<a href="#" class="btn btn-info btn-block">Update</a>
+    						</div>
+    					</div>
+    				</div>
+
+    				<!-- Friend list -->
+    				<div class="col-sm-12">
+    					</br>
+    					<div class="h-divider"></div>
+    					<img src="profile.svg" class="img-circle center-block" width="100px" height="100px">
+    					<div class="container">
+    						<h4>David Chen</h4>
+    						<h6>No homework today!</h6>
+    					</div></br>
+    					<img src="profile.svg" class="img-circle center-block" width="100px" height="100px">
+    					<div class="container">
+    						<h4>Michael Brown</h4>
+    						<h6>Party night!</h6>
+    					</div></br>
+    					<img src="profile.svg" class="img-circle center-block" width="100px" height="100px">
+    					<div class="container">
+    						<h4>Sam Houston</h4>
+    						<h6>Revolution!</h6>
+    					</div></br>
+    				</div>
+    			</div>
+
+    		</div>
+		</div>
+	</div>
+</body>
+
+</html>

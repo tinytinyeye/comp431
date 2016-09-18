@@ -1,0 +1,64 @@
+form {
+	padding-left: 3%;
+	padding-right: 20%;
+}
+
+img {
+	padding: 20px;
+}
+
+.h-divider{
+	margin-top:5px;
+	margin-bottom:5px;
+ 	height:1px;
+ 	width:100%;
+ 	border-top:1px solid gray;
+}
+
+#alert {
+	display: none;
+}
+
+#loginId {
+	padding-left: 3%;
+	padding-right: 20%;	
+}
+
+#loginPwd {
+	padding-left: 3%;
+	padding-right: 20%;
+}
+
+#login {
+	padding-left: 3%;
+	padding-right: 20%;
+}
+
+#imgUpload {
+	margin-top: 20px;
+	margin-right: 20px;
+	padding: 15px 30px;
+}
+
+#postInput {
+	margin-top: 20px;
+}
+
+#searchBg {
+	padding: 10px;
+	padding-bottom: 15px;
+}
+
+#btnSearch {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#btnLogout {
+
+}
+
+#btnProfile {
+
+}
