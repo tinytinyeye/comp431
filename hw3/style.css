@@ -15,29 +15,51 @@ img {
  	border-top:1px solid gray;
 }
 
+.imgCard {
+	padding: 5px;
+	border-radius: 1em;
+}
+
+.card {
+	border: 0.5px solid lightgrey;
+	border-radius: 1em;
+	padding: 10px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
 #alert {
 	display: none;
 }
 
-#loginId {
+#loginId, #loginPwd, #login {
 	padding-left: 3%;
 	padding-right: 20%;	
 }
 
-#loginPwd {
-	padding-left: 3%;
-	padding-right: 20%;
-}
-
-#login {
-	padding-left: 3%;
-	padding-right: 20%;
-}
-
 #imgUpload {
 	margin-top: 20px;
-	margin-right: 20px;
-	padding: 15px 30px;
+	padding: 15px;
 }
 
 #postInput {
@@ -55,10 +77,10 @@ img {
 	padding: 10px;
 }
 
-#btnLogout {
-
+#updateInfo {
+	margin-top: -60px;
 }
 
-#btnProfile {
-
+#alertS {
+	display: none;
 }
