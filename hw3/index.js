@@ -1,10 +1,13 @@
 $(window).load(function() {
 
+	// Validate input info when submit button is clicked.
 	$("#btnSubmit").click(function() {
 		return validate();
 	})
 
+	// Validate input info when login button is clicked.
 	$("#btnLogin").click(function() {
+		// Direct to main page if the input is not empty
 		if ($("#id").val() != "" && $("#pwd").val() != "") {
 			window.location.href = "main.html";
 		}
@@ -42,9 +45,11 @@ function validate() {
 
 // Function to display alert
 function invalidAlert(alertStr) {
+	// Display "close" icon on Bootstrap alert
 	var closeHtml = "<a href='#'' class='close' data-hide='alert' aria-label='close'>&times;</a>"
 	$("#alert").show();
 	$("#alert").html(closeHtml + alertStr);
+	// Hide alert notification when "close" is clicked.
 	$("[data-hide]").on("click", function() {
         $("." + $(this).attr("data-hide")).hide();
     });
@@ -69,7 +74,8 @@ function validBirthday(form) {
 	var birthday = new Date(Date.parse(form.birthday.value))
 	var today = new Date()
 	var cutoffDate = new Date()
-	cutoffDate.setFullYear(today.getFullYear() - 18, today.getMonth(), today.getDate()) // Compute cutoff date for age validation.
+	// Compute cutoff date for age validation.
+	cutoffDate.setFullYear(today.getFullYear() - 18, today.getMonth(), today.getDate())
 	if (birthday < cutoffDate) {
 		return true
 	} else {

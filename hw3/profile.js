@@ -50,9 +50,11 @@ function validate() {
 // and 1 for update success message.
 function sendAlert(type, alertStr) {
 	var closeHtml = "<a href='#'' class='close' data-hide='alert' aria-label='close'>&times;</a>"
+	// Invalid alert
 	if (type == 0) {
 		$("#alert").show();
 		$("#alert").html(closeHtml + alertStr);
+	// Success alert
 	} else {
 		$("#alertS").show();
 		$("#alertS").html(closeHtml + alertStr);

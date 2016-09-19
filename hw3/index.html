@@ -24,42 +24,43 @@
 
   <div class="row">
 
+    <!-- Area for registered users -->
     <div class="col-sm-6">
 
       <div class="container">
+        <h3>Already have an account?</h3></br>
+      
+        <!-- User name area -->
+        <div class="row">
+          <div class="col-sm-8" id="loginId">
+            <label>Username:</label>
+            <input class="form-control" type="text" id="id"><br>
+          </div>
+        </div>
 
-      <h3>Already have an account?</h3></br>
+        <!-- Password area -->
+        <div class="row">
+          <div class="col-sm-8" id="loginPwd">
+            <label>Password:</label>
+            <input class="form-control" type="password" id="pwd"><br>
+          </div>
+        </div>
 
-      <div class="row">
-      <div class="col-sm-8" id="loginId">
-        <label>Username:</label>
-        <input class="form-control" type="text" id="id"><br>
+        <!-- Login button area -->
+        <div class="row">
+          <div class="col-sm-8" id="login">
+            <button type="button" class="btn btn-success btn-block" id="btnLogin">Login</button>
+          </div>
+        </div>
       </div>
-      </div>
-
-      <div class="row">
-      <div class="col-sm-8" id="loginPwd">
-        <label>Password:</label>
-        <input class="form-control" type="password" id="pwd"><br>
-      </div>
-      </div>
-
-      <div class="row">
-      <div class="col-sm-8" id="login">
-        <button type="button" class="btn btn-success btn-block" id="btnLogin">Login</button>
-      </div>
-      </div>
-
-      </div>
-
     </div>
 
+    <!-- Area for new user -->
     <div class="col-sm-6">
 
       <div class="container">
-      <h3>New User?</h3></br>
+        <h3>New User?</h3></br>
       </div>
-
       <form id="regForm" method="GET" action="main.html">
 
         <div class="form-group">
@@ -102,8 +103,10 @@
             <input type="password" class="form-control" name="pwdConfirm" required>
         </div>
 
+        <!-- Alert notification area -->
         <div class="alert alert-success" id="alert"></div>
 
+        <!-- Button area -->
         <div class="form-group">
           <input type="submit" class="btn btn-success btn-block" value="Submit" id="btnSubmit" >
           <input type="reset" class="btn btn-warning btn-block" value="Clear">
@@ -113,9 +116,5 @@
     </div>
   </div>
   </div>
-
-
-	
-	
 </body>
 </html>
