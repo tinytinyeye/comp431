@@ -1,0 +1,82 @@
+form {
+	padding-left: 3%;
+	padding-right: 20%;
+}
+
+img {
+	padding: 20px;
+}
+
+.h-divider{
+	margin-top:5px;
+	margin-bottom:5px;
+ 	height:1px;
+ 	width:100%;
+ 	border-top:1px solid gray;
+}
+
+.imgCard {
+	padding: 5px;
+	border-radius: 1em;
+}
+
+.card {
+	border: 0.5px solid lightgrey;
+	border-radius: 1em;
+	padding: 10px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#alert {
+	display: none;
+}
+
+#loginId, #loginPwd, #login {
+	padding-left: 3%;
+	padding-right: 20%;	
+}
+
+#imgUpload {
+	margin-top: 20px;
+	padding: 15px;
+}
+
+#postInput {
+	margin-top: 20px;
+}
+
+#searchBg {
+	padding: 10px;
+	padding-bottom: 15px;
+}
+
+#btnSearch {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#alertS {
+	display: none;
+}
