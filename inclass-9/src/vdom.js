@@ -26,7 +26,6 @@ function createElement(node) {
             Object.keys(node.props).forEach(function(atr) {
                 var att = document.createAttribute(atr.replace("className", "class"));
                 if (atr == "onClick") {
-                    console.log(node.props[atr]);
                     elm.addEventListener("click", node.props[atr]);
                 } else {
                     att.value = node.props[atr];
@@ -75,19 +74,7 @@ function updateElement(parent, newNode, oldNode, index=0) {
         var oldElm = parent.childNodes[index];
         parent.replaceChild(newElm, oldElm);
     } else if (newNode.type) {
-        // var i;
-        // parent.childNodes.forEach((child) => {
-        //     updateElement(parent.childNodes[index], 
-        //                 newNode.children[i], 
-        //                 oldNode.children[i], 
-        //                 i);
-        //     i++;
-        // })
-        const newLength = newNode.children.length;
-        const oldLength = oldNode.children.length;
-        for (let i = 0; i < newLength || i < oldLength; i++) {
-            updateElement($parent.childNodes[index], newNode.children[i], oldNode.children[i], i);
-        }
+        
     }
 }
 
