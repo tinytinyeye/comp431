@@ -35,7 +35,7 @@ function server(req, res) {
           }
      } else if (req.method === "POST") {
           if (req.url === "/login") {
-               payload = req.body;
+               payload = { username: JSON.parse(req.body).username, result: "success" }
                result = JSON.stringify(payload);
           }
      } else if (req.method === "PUT") {
