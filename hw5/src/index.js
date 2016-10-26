@@ -7,12 +7,15 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
+import { initialVisit } from './components/auth/authActions'
 
 import Reducer from './reducers'
 import App from './components/app'
 
 let store = createStore(Reducer, applyMiddleware(thunkMiddleware))
-// let store = createStore(Reducer)
+
+// Bring user to main page if already logged in
+store.dispatch(initialVisit())
 
 render(
     <Provider store={store}>

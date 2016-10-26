@@ -6,17 +6,16 @@ import Landing from './auth/landing'
 import Profile from './profile/profile'
 
 const App = ( {location} ) => {
-	let view
+	let currentView
 	switch(location) {
-		case 'main': view = <Main/>; break;
-		case 'profile': view = <Profile/>; break;
-		case 'landing' : view = <Profile/>; break;
-		default: view = <Landing/>; break;
+		case 'main': currentView = <Main/>; break;
+		case 'profile': currentView = <Profile/>; break;
+		case 'landing' : currentView = <Landing/>; break;
+		default: currentView = <Landing/>; break;
 	}
-
 	return(
 		<div>
-			{ view }
+			{ currentView }
 		</div>
 	)
 }

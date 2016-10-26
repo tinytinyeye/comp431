@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/profile/profileActions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/profile/</a> profileActions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.48% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>33/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.11% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34.69% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>17/49</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Promise from 'bluebird'
+import fetch from 'isomorphic-fetch'
+import { validEmail, validZipcode, confirmPassword } from '../auth/authActions'
+import { resource, updateErrorMsg, updateSuccessMsg } from '../../actions'
+&nbsp;
+// Fetch a single field of profile info
+const fetchField = <span class="fstat-no" title="function not covered" >(field) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		r</span>esource('GET', field)
+			.then(<span class="fstat-no" title="function not covered" >(r) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >				s</span>witch(field) {
+					case "avatars":
+<span class="cstat-no" title="statement not covered" >						dispatch(updateAvatar(r.avatars[0].avatar)); <span class="cstat-no" title="statement not covered" >b</span></span>reak;
+					case "zipcode":
+<span class="cstat-no" title="statement not covered" >						dispatch(updateZipcode(r.zipcode)); <span class="cstat-no" title="statement not covered" >b</span></span>reak;
+					case "email" :
+<span class="cstat-no" title="statement not covered" >						dispatch(updateEmail(r.email)); <span class="cstat-no" title="statement not covered" >b</span></span>reak;
+					case "dob":
+<span class="cstat-no" title="statement not covered" >						dispatch(updateBirthday((new Date(r.dob))</span>
+												.toDateString())); <span class="cstat-no" title="statement not covered" >b</span>reak;
+					case "headlines":
+<span class="cstat-no" title="statement not covered" >						d</span>ispatch(updateHeadline(r.headlines[0].headline));
+<span class="cstat-no" title="statement not covered" >						d</span>ispatch(updateName(r.headlines[0].username));
+<span class="cstat-no" title="statement not covered" >						b</span>reak;
+				}
+			})
+	}
+}
+&nbsp;
+// Fetch all fields of profile info
+const fetchProfile = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		d</span>ispatch(fetchField("avatars"))
+<span class="cstat-no" title="statement not covered" >		d</span>ispatch(fetchField("zipcode"))
+<span class="cstat-no" title="statement not covered" >		d</span>ispatch(fetchField("email"))
+<span class="cstat-no" title="statement not covered" >		d</span>ispatch(fetchField("dob"))
+<span class="cstat-no" title="statement not covered" >		d</span>ispatch(fetchField("headlines"))
+	}
+}
+&nbsp;
+// Update profile info in the profile page
+export const updateProfile = <span class="fstat-no" title="function not covered" >(email, zipcode, password) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		if (email !== "") <span class="cstat-no" title="statement not covered" >d</span></span>ispatch(updateEmail(email))
+<span class="cstat-no" title="statement not covered" >		if (zipcode !== "") <span class="cstat-no" title="statement not covered" >d</span></span>ispatch(updateZipcode(zipcode))
+<span class="cstat-no" title="statement not covered" >		if (password !== "") <span class="cstat-no" title="statement not covered" >d</span></span>ispatch(updatePassword(password))
+	}
+}
+&nbsp;
+// Action creators
+export const updateAvatar = (avatar) =&gt; {return {type: "UPDATE_AVATAR", avatar}}
+export const updateZipcode = (zipcode) =&gt; {return {type: "UPDATE_ZIPCODE", zipcode}}
+export const updateEmail = (email) =&gt; {return {type: "UPDATE_EMAIL", email}}
+export const updateName = (name) =&gt; {return {type: "UPDATE_NAME", name}}
+export const updateHeadline = (headline) =&gt; {return {type: "UPDATE_HEADLINE", headline}}
+export const updateBirthday = (birthday) =&gt; {return {type: "UPDATE_BIRTHDAY", birthday}}
+export const updatePassword = (password) =&gt; {return {type: "UPDATE_PASSWORD", password}}
+&nbsp;
+// Change the headline in the main page
+const changeHeadline = <span class="fstat-no" title="function not covered" >(username, headline) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		r</span>esource('PUT', 'headline', { username, headline })
+			.then(dispatch(updateHeadline(headline)))
+	}
+}
+&nbsp;
+// Validate all profile inputs are valid
+export <span class="fstat-no" title="function not covered" >function validateProfile(email, zipcode, password, pwdConfirm) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		if (!validEmail(email) &amp;&amp; email) { // Validate email address.</span>
+<span class="cstat-no" title="statement not covered" >			d</span>ispatch(updateErrorMsg("Please enter a valid email address."))
+		} else <span class="cstat-no" title="statement not covered" >if (!validZipcode(zipcode) &amp;&amp; zipcode) { // Validate zipcode.</span>
+<span class="cstat-no" title="statement not covered" >			d</span>ispatch(updateErrorMsg("Please enter a valid zipcode."))
+		} else <span class="cstat-no" title="statement not covered" >if (!confirmPassword(password, pwdConfirm) &amp;&amp; password &amp;&amp; pwdConfirm) { // Validate password.</span>
+<span class="cstat-no" title="statement not covered" >			d</span>ispatch(updateErrorMsg("Please enter the same password for confirmation."))
+		} else {
+<span class="cstat-no" title="statement not covered" >			d</span>ispatch(updateSuccessMsg("Successfully updated"))
+<span class="cstat-no" title="statement not covered" >			d</span>ispatch(updateProfile(email, zipcode, password))
+		}
+	}
+}
+&nbsp;
+export { fetchField, fetchProfile, changeHeadline }</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 26 2016 00:07:03 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

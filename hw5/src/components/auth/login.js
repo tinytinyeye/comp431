@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { login } from './authActions'
 
-const Login = ( { dispatch } ) => {
+const Login = ( { login } ) => {
 	let username, password
-
 	return(
-		<div className="col-sm-6">
+		<div className="col-sm-6 col-md-6">
 			<div className="container">
         		<h3>Already have an account?</h3>
         		<div className="row">&nbsp;</div>
@@ -27,7 +27,10 @@ const Login = ( { dispatch } ) => {
 
         		<div className="row">
           			<div className="col-sm-8" id="login">
-            		<button type="button" className="btn btn-success btn-block" id="btnLogin">Login</button>
+            		<button type="button" className="btn btn-success btn-block" 
+                  id="btnLogin" onClick={(e) => 
+                    login(username.value, password.value)}>
+                    Login</button>
           			</div>
         		</div>
       		</div>
@@ -35,4 +38,8 @@ const Login = ( { dispatch } ) => {
 	)
 }
 
-export default connect()(Login)
+export default connect(null, (dispatch) => {
+  return {
+    login: (username, password) => dispatch(login(username, password))
+  }
+})(Login)

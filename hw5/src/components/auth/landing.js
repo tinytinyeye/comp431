@@ -4,37 +4,38 @@ import { connect } from 'react-redux'
 import Login from './login'
 import Register from './register'
 
-let ErrorMsg = ({ errorMsg, successMsg }) => {
+// Component used for error and success message display
+let AlertMsg = ({ errorMsg, successMsg }) => {
 	return (
 		<div className="row">
-		{
+		<div className="col-sm-12 col-md-12">
+			{
 			errorMsg === "" ? "" :
 			<div className="alert alert-danger" id="errorMsg">
 				{ errorMsg }
-				<div className="row">&nbsp;</div>
 			</div>
 			
-		}
-		{
+			}
+			{
 			successMsg === "" ? "" :
-			<div className="alert alert-danger" id="successMsg">
+			<div className="alert alert-success" id="successMsg">
 				{ successMsg }
-				<div className="row">&nbsp;</div>
 			</div>
-		}
+			}
+		</div>
 		</div>
 	)
 }
 
-ErrorMsg.PropTypes = {
+AlertMsg.PropTypes = {
 	errorMsg: PropTypes.string.isRequired,
 	successMsg: PropTypes.string.isRequired
 }
 
-ErrorMsg = connect((state) => {
+AlertMsg = connect((state) => {
 	return { errorMsg: state.status.errorMsg, 
 			 successMsg: state.status.successMsg }
-})(ErrorMsg)
+})(AlertMsg)
 
 const Landing = () => {
 	return (
@@ -47,12 +48,12 @@ const Landing = () => {
 			   <div className="row">&nbsp;</div>
 			</div>
 		</div>
-
+		<AlertMsg/>
 		<Login/>
-		<ErrorMsg/>
 		<Register/>
 	</div>
 	)
 }
 
 export default Landing
+export { AlertMsg }

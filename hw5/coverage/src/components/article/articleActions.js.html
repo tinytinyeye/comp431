@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/article/articleActions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/article/</a> articleActions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">67.61% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>48/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.36% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.15% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/65</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Promise from 'bluebird'
+import fetch from 'isomorphic-fetch'
+import { resource, updateErrorMsg, updateSuccessMsg } from '../../actions'
+&nbsp;
+// Fetch all articles from server, use article id as key to store
+// articles into a json object and store it to redux store.
+export const fetchArticles = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		r</span>esource('GET', "articles").then(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r</span></span> =&gt; r.articles).then(<span class="fstat-no" title="function not covered" >r =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			l</span>et articles = {}
+<span class="cstat-no" title="statement not covered" >			r</span>.forEach(<span class="fstat-no" title="function not covered" >(article) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >				a</span>rticles[article._id] = article
+			})
+<span class="cstat-no" title="statement not covered" >			d</span>ispatch(updateArticles(articles))
+		})
+	}
+}
+&nbsp;
+// Fetch avatars of all authors in the article list, use username
+// as key and img as value.
+export const fetchAvatars = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn <span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		r</span>esource('GET', "following")
+			.then(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r</span></span> =&gt; r.following)
+			.then(<span class="fstat-no" title="function not covered" >r =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >				l</span>et avatars = {}
+<span class="cstat-no" title="statement not covered" >				l</span>et promiseList = []
+<span class="cstat-no" title="statement not covered" >				r</span>.forEach(<span class="fstat-no" title="function not covered" >(user) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >					a</span>vatars[user] = {}
+				})
+				// Add each fetch request to a promise list so that
+				// the avatar list will not be pushed to redux store
+				// until all promises are resolved.
+<span class="cstat-no" title="statement not covered" >				r</span>.forEach(<span class="fstat-no" title="function not covered" >(user) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >					l</span>et promise = 
+						resource('GET', 'avatars/' + user).then(<span class="fstat-no" title="function not covered" >res =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >								a</span>vatars[user] = res.avatars[0].avatar
+						})
+<span class="cstat-no" title="statement not covered" >					p</span>romiseList.push(promise)
+				})
+				// Add user itself to the promise list
+<span class="cstat-no" title="statement not covered" >				l</span>et promise = resource('GET', 'avatars').then(<span class="fstat-no" title="function not covered" >res =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >					a</span>vatars[res.avatars[0].username] = res.avatars[0].avatar
+				})
+<span class="cstat-no" title="statement not covered" >				p</span>romiseList.push(promise)
+				// Update avatar list after all avatars are fetched
+<span class="cstat-no" title="statement not covered" >				P</span>romise.all(promiseList)
+					.then(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >						d</span>ispatch(updateAvatars(avatars))
+					})
+			})
+	}
+}
+&nbsp;
+// Action creators
+export const updateArticles = (articles) =&gt; {
+	return {type: "UPDATE_ARTICLES", articles}
+}
+&nbsp;
+export const updateAvatars = (avatars) =&gt; {
+	return {type: "UPDATE_AVATARS", avatars}
+}
+&nbsp;
+export const updateKeyword = (keyword) =&gt; {
+	return {type: "UPDATE_KEYWORD", keyword}
+}
+&nbsp;
+export const addArticle = (article) =&gt; {
+	return {type: "ADD_ARTICLE", article}
+}
+&nbsp;
+// Parse date for better visual experience
+export const parseDate = (date) =&gt; {
+	let day = date.split("T")[0]
+	let time = date.split("T")[1].split(".")[0]
+	return "on " + day + " at " + time
+}
+&nbsp;
+// Sort function for articles
+export const sortByDate = (a, b) =&gt; {
+	let day1 = a.date.split("T")[0]
+	let day2 = b.date.split("T")[0]
+	let dayDiff = new Date(day1) - new Date(day2)
+	if (dayDiff &lt; 0) {
+		return 1;
+	} else if (dayDiff &gt; 0) {
+		return -1;
+	// If two articles are on the same day
+	} else {
+		let time1 = a.date.split("T")[1].split(".")[0].split(":")
+		let time2 = b.date.split("T")[1].split(".")[0].split(":")
+		let s1 = time1[0]*60*60 + time1[1]*60 + time1[2]
+		let s2 = time2[0]*60*60 + time2[1]*60 + time2[2]
+		let sDiff = s1 - s2
+		if (sDiff &lt; 0) {
+			return 1;
+		} else if (sDiff &gt; 0) {
+			return -1;
+		} else {
+			return 0;
+		}
+	}
+}
+&nbsp;
+// Filter articles by author and body
+export const filterByKeyword = (article, keyword) =&gt; {
+	if (keyword === "") {
+		return true
+	} else {
+		keyword = keyword.toLowerCase()
+		if ((article.author.toLowerCase().indexOf(keyword) != -1) || 
+			(article.text.toLowerCase().indexOf(keyword)) != -1) {
+			return true
+		}
+		return false
+	}
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 26 2016 00:07:03 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

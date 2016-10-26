@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/reducers.spec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> reducers.spec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.82% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/88</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.65% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/86</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {expect} from 'chai'
+import Reducer from './reducers'
+import { profile, route, status, following, articles } from './reducers'
+&nbsp;
+describe('initialize state', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should initialize state', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			profile: { name: '', email: '', zipcode: '', avatar: '', 
+					   headline: '', birthday: '', password: '' },
+  			route: { location: 'landing' },
+  			status: { errorMsg: '', successMsg: '' },
+  			following: { followers: {} },
+  			articles: { articles: {}, avatars: {}, keyword: '' } 
+  		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(Reducer({}, {})).to.deep.equal(expected)
+	})
+&nbsp;
+})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >d</span>escribe('Page navigation', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle navigation to landing', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			location : 'landing'
+		}
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'LANDING' }
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(route({ location: 'main' }, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle navigation to main', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			location : 'main'
+		}
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'MAIN' }
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(route({ location: 'landing' }, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle navigation to profile', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			location : 'profile'
+		}
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'PROFILE' }
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(route({ location: 'main' }, action)).to.deep.equal(expected)
+	})
+&nbsp;
+})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >d</span>escribe('Message update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	c</span>onst before = { successMsg: '', errorMsg: '' }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle success message update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			successMsg : 'Successful!',
+			errorMsg : ''
+		}
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'SUCCESS' , successMsg: 'Successful!'}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(status(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle error message update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			successMsg : '',
+			errorMsg : 'Error!'
+		}
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'ERROR' , errorMsg: 'Error!'}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(status(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >d</span>escribe('Profile update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	c</span>onst before = { 
+			name: '', email: '', zipcode: '', avatar: '', 
+			headline: '', birthday: '', password: '' 
+	}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle name update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: "UPDATE_NAME", name: "name" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			name: 'name', email: '', zipcode: '', avatar: '', 
+			headline: '', birthday: '', password: '' 
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(profile(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle email update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: "UPDATE_EMAIL", email: "email" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			name: '', email: 'email', zipcode: '', avatar: '', 
+			headline: '', birthday: '', password: '' 
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(profile(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle zipcode update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: "UPDATE_ZIPCODE", zipcode: "12345" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			name: '', email: '', zipcode: '12345', avatar: '', 
+			headline: '', birthday: '', password: '' 
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(profile(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle avatar update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: "UPDATE_AVATAR", avatar: "avatar" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			name: '', email: '', zipcode: '', avatar: 'avatar', 
+			headline: '', birthday: '', password: '' 
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(profile(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle headline update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: "UPDATE_HEADLINE", headline: "headline" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			name: '', email: '', zipcode: '', avatar: '', 
+			headline: 'headline', birthday: '', password: '' 
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(profile(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle birthday update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: "UPDATE_BIRTHDAY", birthday: "1029371926817" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			name: '', email: '', zipcode: '', avatar: '', 
+			headline: '', birthday: '1029371926817', password: '' 
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(profile(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle headline update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: "UPDATE_HEADLINE", headline: "headline" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			name: '', email: '', zipcode: '', avatar: '', 
+			headline: 'headline', birthday: '', password: '' 
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(profile(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle password update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: "UPDATE_PASSWORD", password: "password" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = { 
+			name: '', email: '', zipcode: '', avatar: '', 
+			headline: '', birthday: '', password: 'password' 
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(profile(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >d</span>escribe('Following update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle follower update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst before = { followers : {} }
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'UPDATE_FOLLOWERS', 
+				followers: {"username":"qh5","following":["qh5test","sep1"]}}
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			followers: {"username":"qh5","following":["qh5test","sep1"]}
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(following(before, action)).to.deep.equal(expected)
+	})
+})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >d</span>escribe('Article update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle articles update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst before = { articles: {} }
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'UPDATE_ARTICLES', articles: {
+			1 : {_id: 1, text: 'abc', date: '12-12-2012', img: 'a.jpg', 
+			author: 'a', comments: [ { commentId: 1, author: 'b', 
+			date: '12-12-2012', text: 'cba' } ]}}
+		}
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			articles: {
+				1 : {_id: 1, text: 'abc', date: '12-12-2012', img: 'a.jpg', 
+				author: 'a', comments: [ { commentId: 1, author: 'b', 
+				date: '12-12-2012', text: 'cba' } ]}
+			}
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(articles(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle avatars update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst before = { avatars: {} }
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'UPDATE_AVATARS', avatars: {sa23 : "a.jpg"}}
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			avatars: {sa23 : "a.jpg"}
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(articles(before, action)).to.deep.equal(expected)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should handle keyword update', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		c</span>onst before = { keyword : "" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst action = { type: 'UPDATE_KEYWORD', keyword: "abc" }
+<span class="cstat-no" title="statement not covered" >		c</span>onst expected = {
+			keyword: "abc"
+		}
+<span class="cstat-no" title="statement not covered" >		e</span>xpect(articles(before, action)).to.deep.equal(expected)
+	})
+})
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 26 2016 00:07:03 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/profile/profileForm.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/profile/</a> profileForm.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.82% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/22</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
+import { validateProfile } from './profileActions'
+import { AlertMsg } from '../auth/landing'
+&nbsp;
+const ProfileForm = <span class="fstat-no" title="function not covered" >( {oldEmail, oldZipcode, birthday, avatar, </span>
+	validateProfile} ) =&gt; <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >{</span></span></span></span></span>
+	
+<span class="cstat-no" title="statement not covered" >	l</span>et email, zipcode, password, pwdConfirm
+<span class="cstat-no" title="statement not covered" >	r</span>eturn (
+		&lt;div className="row"&gt;
+			&lt;div className="col-sm-6 col-md-6"&gt;
+				&lt;img src={ avatar } className="img-circle center-block"/&gt;
+				&lt;input type="file" name="file" id="profileImg" className="inputfile" /&gt;
+				&lt;label htmlFor="profileImg" className="btn btn-info btn-block"&gt;Upload&lt;/label&gt;
+				&lt;h4&gt;Current info:&lt;/h4&gt;
+				&lt;ul className="list-group"&gt;
+  					&lt;li className="list-group-item" id="currentEmailAddress"&gt;
+  						Email: { oldEmail }&lt;/li&gt;
+  					&lt;li className="list-group-item" id="currentZipcode"&gt;
+  						Zipcode: { oldZipcode }&lt;/li&gt;
+  					&lt;li className="list-group-item" id="birthday"&gt;
+  						Birthday: { birthday }&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+&nbsp;
+			&lt;div className="col-sm-6 col-md-6" id="updateInfo"&gt;
+				&lt;h4&gt;Update Info:&lt;/h4&gt;
+				&lt;label&gt;Email address: &lt;/label&gt;
+				&lt;input className="form-control" type="email" id="emailAddress"
+					ref={<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span></span>node) =&gt; email = node}/&gt;
+				&lt;div className="row"&gt;&amp;nbsp;&lt;/div&gt;
+				&lt;label&gt;Zipcode: &lt;/label&gt;
+				&lt;input className="form-control" type="number" id="zipcode"
+					ref={<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span></span>node) =&gt; zipcode = node}/&gt;
+				&lt;div className="row"&gt;&amp;nbsp;&lt;/div&gt;
+				&lt;label&gt;Password: &lt;/label&gt;
+				&lt;input className="form-control" type="password" id="password"
+					ref={<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span></span>node) =&gt; password = node}/&gt;
+				&lt;div className="row"&gt;&amp;nbsp;&lt;/div&gt;
+				&lt;label&gt;Password confirmation: &lt;/label&gt;
+				&lt;input className="form-control" type="password" id="pwdConfirm"
+					ref={<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span></span>node) =&gt; pwdConfirm = node}/&gt;
+				&lt;div className="row"&gt;&amp;nbsp;&lt;/div&gt;
+				&lt;div className="alert alert-danger" id="alert"&gt;&lt;/div&gt;
+				&lt;div className="alert alert-success" id="alertS"&gt;&lt;/div&gt;
+				&lt;input type="button" className="btn btn-info btn-block" 
+					value="Update" id="btnUpdate" 
+					onClick={<span class="fstat-no" title="function not covered" >(e) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >						v</span>alidateProfile(email.value, zipcode.value, 
+							password.value, pwdConfirm.value)
+<span class="cstat-no" title="statement not covered" >						e</span>mail.value = ""
+<span class="cstat-no" title="statement not covered" >						z</span>ipcode.value = ""
+<span class="cstat-no" title="statement not covered" >						p</span>assword.value = ""
+<span class="cstat-no" title="statement not covered" >						p</span>wdConfirm.value = ""
+					}}
+				/&gt;
+				&lt;div className="row"&gt;&amp;nbsp;&lt;/div&gt;
+				&lt;AlertMsg/&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	)
+}
+&nbsp;
+ProfileForm.PropTypes = {
+	oldEmail: PropTypes.string,
+	oldZipcode: PropTypes.string,
+	avatar: PropTypes.string,
+	birthday: PropTypes.string,
+	validateProfile: PropTypes.function
+}
+&nbsp;
+export default connect(
+<span class="fstat-no" title="function not covered" >	(state) =&gt; {<span class="cstat-no" title="statement not covered" ></span>r</span>eturn { 
+		oldEmail: state.profile.email,
+		oldZipcode: state.profile.zipcode,
+		avatar: state.profile.avatar,
+		birthday: state.profile.birthday 
+	}},
+<span class="fstat-no" title="function not covered" >	(dispatch) =&gt; {<span class="cstat-no" title="statement not covered" ></span>r</span>eturn {
+		validateProfile: <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span></span>email, zipcode, password, pwdConfirm) =&gt; 
+		dispatch(validateProfile(email, zipcode, password, pwdConfirm))
+	}}
+)(ProfileForm)</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 26 2016 00:07:03 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
