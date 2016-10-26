@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { validateProfile } from './profileActions'
 import { AlertMsg } from '../auth/landing'
 
+// Display user profile info and allow user to edit
 const ProfileForm = ( {oldEmail, oldZipcode, birthday, avatar, 
 	validateProfile} ) => {
 	
@@ -11,8 +12,10 @@ const ProfileForm = ( {oldEmail, oldZipcode, birthday, avatar,
 		<div className="row">
 			<div className="col-sm-6 col-md-6">
 				<img src={ avatar } className="img-circle center-block"/>
-				<input type="file" name="file" id="profileImg" className="inputfile" />
-				<label htmlFor="profileImg" className="btn btn-info btn-block">Upload</label>
+				<input type="file" name="file" id="profileImg" 
+				className="inputfile" />
+				<label htmlFor="profileImg" 
+				className="btn btn-info btn-block">Upload</label>
 				<h4>Current info:</h4>
 				<ul className="list-group">
   					<li className="list-group-item" id="currentEmailAddress">

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { parseDate } from './articleActions'
 import { Comments } from './comment'
 
+// A single article for display. User is the current username
 const Article = ( { avatar, img, author, date, text, comments, user } ) => {
 	let showComment = true
 	return (

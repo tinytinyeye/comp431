@@ -7,6 +7,7 @@ import Profile from './profile/profile'
 
 const App = ( {location} ) => {
 	let currentView
+	// Render different views according to the location in state
 	switch(location) {
 		case 'main': currentView = <Main/>; break;
 		case 'profile': currentView = <Profile/>; break;

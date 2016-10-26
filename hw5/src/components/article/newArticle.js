@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { addArticle } from './articleActions'
 
+// Area for writing new article
 export const NewArticle = ( { addArticle } ) => {
 	let newArticle = ""
 	return (

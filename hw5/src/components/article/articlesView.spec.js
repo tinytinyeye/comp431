@@ -25,6 +25,7 @@ describe('article view', () => {
 		
 		const node = shallow(<ArticlesView articles={articles} 
 							avatars={avatars} keyword=""/>)
+		// Created two articles and therefore the children should be 4
 		expect(node.children().length).to.equal(4)
 	})
 

@@ -23,7 +23,8 @@ const Register = ( { validate } ) => {
 
     		<div className="form-group">
         		<label>Zipcode:</label>
-        		<input type="number" className="form-control" name="zipcode" required
+        		<input type="number" className="form-control" 
+            name="zipcode" required
         			placeholder="77005" ref={(node) => zipcode = node}/>
     		</div>
 
@@ -35,13 +36,17 @@ const Register = ( { validate } ) => {
 
     		<div className="form-group">
         		<label>Password confirmation:</label>
-        		<input type="password" className="form-control" name="pwdConfirm" required
+        		<input type="password" className="form-control" 
+            name="pwdConfirm" required
         			ref={(node) => pwdConfirm = node}/>
     		</div>
 
     		<div className="form-group">
-      			<input type="submit" className="btn btn-success btn-block" value="Submit" id="btnSubmit"/>
-      			<input type="reset" className="btn btn-warning btn-block" value="Clear"/>
+      			<input type="submit" 
+            className="btn btn-success btn-block" 
+            value="Submit" id="btnSubmit"/>
+      			<input type="reset" className="btn btn-warning btn-block" 
+            value="Clear"/>
     		</div>
 
 		</form>

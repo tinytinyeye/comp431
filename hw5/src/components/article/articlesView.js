@@ -5,6 +5,7 @@ import NewArticle from './newArticle'
 import Article from './article'
 import { updateKeyword, sortByDate, filterByKeyword } from './articleActions'
 
+// Display articles, include a search area.
 export const ArticlesView = ({ articles, avatars, keyword, 
 	updateKeyword }) => {
 	let kw

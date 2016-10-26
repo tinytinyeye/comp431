@@ -14,15 +14,17 @@ const Nav = ( { logout, navToProfile } ) => (
 			<div className="row">&nbsp;</div>
 			<div className="row">
 				<div className="col-sm-6 col-md-6">
-					<button className="btn btn-danger btn-block" id="btnLogout" 
+					<button className="btn btn-danger btn-block" id="btnLogout"
 						onClick={() => logout()}>
-						<span className="glyphicon glyphicon-log-out"></span> Logout
+						<span className="glyphicon glyphicon-log-out">
+						</span> Logout
 					</button>
 				</div>
 				<div className="col-sm-6 col-md-6">
 					<button className="btn btn-info btn-block" id="btnProfile"
 						onClick={() => navToProfile()}>
-						<span className="glyphicon glyphicon-user"></span> Profile
+						<span className="glyphicon glyphicon-user">
+						</span> Profile
 					</button>
 				</div>
 			</div>

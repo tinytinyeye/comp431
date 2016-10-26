@@ -48,13 +48,27 @@ export const updateProfile = (email, zipcode, password) => {
 }
 
 // Action creators
-export const updateAvatar = (avatar) => {return {type: "UPDATE_AVATAR", avatar}}
-export const updateZipcode = (zipcode) => {return {type: "UPDATE_ZIPCODE", zipcode}}
-export const updateEmail = (email) => {return {type: "UPDATE_EMAIL", email}}
-export const updateName = (name) => {return {type: "UPDATE_NAME", name}}
-export const updateHeadline = (headline) => {return {type: "UPDATE_HEADLINE", headline}}
-export const updateBirthday = (birthday) => {return {type: "UPDATE_BIRTHDAY", birthday}}
-export const updatePassword = (password) => {return {type: "UPDATE_PASSWORD", password}}
+export const updateAvatar = (avatar) => {
+	return {type: "UPDATE_AVATAR", avatar}
+}
+export const updateZipcode = (zipcode) => {
+	return {type: "UPDATE_ZIPCODE", zipcode}
+}
+export const updateEmail = (email) => {
+	return {type: "UPDATE_EMAIL", email}
+}
+export const updateName = (name) => {
+	return {type: "UPDATE_NAME", name}
+}
+export const updateHeadline = (headline) => {
+	return {type: "UPDATE_HEADLINE", headline}
+}
+export const updateBirthday = (birthday) => {
+	return {type: "UPDATE_BIRTHDAY", birthday}
+}
+export const updatePassword = (password) => {
+	return {type: "UPDATE_PASSWORD", password}
+}
 
 // Change the headline in the main page
 const changeHeadline = (username, headline) => {
@@ -71,8 +85,10 @@ export function validateProfile(email, zipcode, password, pwdConfirm) {
 			dispatch(updateErrorMsg("Please enter a valid email address."))
 		} else if (!validZipcode(zipcode) && zipcode) { // Validate zipcode.
 			dispatch(updateErrorMsg("Please enter a valid zipcode."))
-		} else if (!confirmPassword(password, pwdConfirm) && password && pwdConfirm) { // Validate password.
-			dispatch(updateErrorMsg("Please enter the same password for confirmation."))
+		} else if (!confirmPassword(password, pwdConfirm) 
+		&& password && pwdConfirm) { // Validate password.
+			dispatch(updateErrorMsg("Please enter the "+
+				"same password for confirmation."))
 		} else {
 			dispatch(updateSuccessMsg("Successfully updated"))
 			dispatch(updateProfile(email, zipcode, password))

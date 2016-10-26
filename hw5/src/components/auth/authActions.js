@@ -15,7 +15,8 @@ export const validate = (email, zipcode, pwd, pwdConfirm) => {
 		} else if (!validZipcode(zipcode)) { // Validate zipcode.
 			dispatch(updateErrorMsg("Please enter a valid zipcode."))
 		} else if (!confirmPassword(pwd, pwdConfirm)) { // Validate password.
-			dispatch(updateErrorMsg("Please enter the same password for confirmation."))
+			dispatch(updateErrorMsg("Please enter the same "+
+				"password for confirmation."))
 		} else {
 			dispatch(updateSuccessMsg("Successfully registered"))
 		}

@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { parseDate } from './articleActions'
 
+// A single comment
 const Comment = ( { commentId, author, date, text } ) => (
 	<div>
 		<strong>{ author } commented on { parseDate(date) }</strong><br/>
@@ -16,6 +17,7 @@ Comment.PropTypes = {
 	text: PropTypes.string
 }
 
+// A list of comments
 const Comments = ( { comments } ) => (
 	<div>
 		{
