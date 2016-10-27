@@ -413,8 +413,9 @@ function loadImages() {
 			"img/Card34.jpg", "img/Card35.jpg", "img/Card36.jpg", 
 			"img/Card37.jpg", "img/Card38.jpg", "img/Card39.jpg", 
 			"img/Card40.jpg", "img/Card41.jpg", "img/Card42.jpg", 
-			"img/Card43.jpg", "img/Card44.jpg", "img/CardBack1.jpg",
-			"img/CardBack2.jpg", "img/CardBack3.jpg", "img/CardBack4.jpg"];
+			"img/Card43.jpg", "img/Card44.jpg", 
+			"img/CardBack1.jpg", "img/CardBack2.jpg", "img/CardBack3.jpg",
+			"img/CardBack4.jpg"];
 	imgs.forEach(function(url) {
   		var img = new Image(200, 200);
   		img.src = url;

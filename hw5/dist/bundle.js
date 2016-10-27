@@ -30348,7 +30348,8 @@
 				(0, _articleActions.parseDate)(date)
 			),
 			_react2.default.createElement('br', null),
-			text
+			text,
+			_react2.default.createElement('div', { className: 'h-divider' })
 		);
 	};
 	
@@ -30366,17 +30367,12 @@
 			'div',
 			null,
 			comments.map(function (comment) {
-				return _react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(Comment, { key: comment.commentId,
-						commentId: comment.commentId,
-						author: comment.author,
-						date: comment.date,
-						text: comment.text
-					}),
-					_react2.default.createElement('div', { className: 'h-divider' })
-				);
+				return _react2.default.createElement(Comment, { key: comment.commentId,
+					commentId: comment.commentId,
+					author: comment.author,
+					date: comment.date,
+					text: comment.text
+				});
 			})
 		);
 	};

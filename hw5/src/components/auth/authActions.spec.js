@@ -68,6 +68,7 @@ describe('Login and logout', () => {
 		let username = "username"
 		let password = "password"
 		login(username, password)(action => {
+			console.log(action.type)
 			expect(action.type).to.equal("MAIN")
 		})
 		done()

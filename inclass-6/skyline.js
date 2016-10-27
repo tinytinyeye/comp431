@@ -56,7 +56,7 @@ var createApp = function(canvas) {
 window.onload = function() {
 	var app = createApp(document.querySelector("canvas"))
 	document.getElementById("build").onclick = app.build
-	setInterval(repaint, 100);
+	setInterval(repaint, 800);
 }
 
 window.onclick = function(MouseEvent) {
@@ -86,9 +86,12 @@ function repaint() {
 	// console.log("in repaint");
 	// console.log(blgs);
 	clearCanvas();
-	paintSun();
 	var canvas = document.querySelector("canvas");
-    var c = canvas.getContext("2d");
+	var c = canvas.getContext("2d");
+	// c.fillStyle='black';
+	// c.fillRect(0, 0, canvas.width, canvas.height)
+	paintSun();
+	
 
 	// Create the ground
 	var floor = canvas.height/2
@@ -152,7 +155,7 @@ function paintCar() {
     var ctx = canvas.getContext("2d");
     var img = new Image();
     img.src = "http://a.dryicons.com/images/icon_sets/travel_and_tourism_part_1/png/128x128/car.png";
-    ctx.drawImage(img, tick2 * 10, 315);
+    ctx.drawImage(img, tick2 * 40, 315);
     if (tick2 >= 80) {
     	tick2 = 0;
     } else {
