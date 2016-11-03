@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser')
 
 const database = {}
 
+const sessionUser = {}
+
 const cookieKey = 'abc'
 
 const register = (req, res) => {
@@ -28,6 +30,7 @@ const login = (req, res) => {
      if (md5(password + salt) === hash) {
           res.cookie(cookieKey, 12345, 
                {maxAfe: 3600*1000, httpOnly: true })
+          sessionUser[12345] = username
           const msg = { username : username, status: 'success'}
           res.send(msg)
      } else {
