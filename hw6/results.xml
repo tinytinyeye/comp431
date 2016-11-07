@@ -1,0 +1,29 @@
+
+> RiceBookServer@0.0.0 test /Users/frankiewong/Documents/college/2016Fall/heroku/comp431-backend
+> mocha --opts mocha.opts src/**/*.spec.js "xunit"
+
+
+
+  Validate Article functionality
+    ✓ should give me three or more articles
+    ✓ should add two articles with successive article ids, and return the article each time
+    ✓ should return an article with a specified id
+    ✓ should return nothing for an invalid id
+
+  Test profile stubs
+    ✓ should GET headlines (278ms)
+    ✓ should GET headlines for a user (146ms)
+    ✓ should PUT headline (174ms)
+    ✓ should GET email (151ms)
+    ✓ should GET email for a user (156ms)
+    ✓ should PUT email (154ms)
+    ✓ should GET zipcode (160ms)
+    ✓ should GET zipcode for a user (152ms)
+    ✓ should PUT zipcode (148ms)
+    ✓ should GET avatars (146ms)
+    ✓ should GET avatars for a user (157ms)
+    ✓ should PUT avatar (165ms)
+
+
+  16 passing (2s)
+

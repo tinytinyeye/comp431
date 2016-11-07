@@ -1,0 +1,5 @@
+{
+	"netid" : "qh5",
+	"frontend" : "http://lackadaisical-channel.surge.sh/",
+	"backend" : "https://comp431-backend.herokuapp.com/"
+}
