@@ -59,7 +59,8 @@ describe('Test main page', () => {
     it('should remove a follower', (done) => {
         // this test will remove the follower named "Follower"
         // we added in the previous test.
-        findElements('.follower')
+        sleep(500)
+        .then(findElements('.follower')
             .then((elms) => {
                 let followerCount = elms.length
                 // by setting the name of "unfollower" button for 
@@ -74,6 +75,7 @@ describe('Test main page', () => {
                             }))
                     .then(done)
             })
+        )
     })
 
     it('should add a new article', (done) => {
