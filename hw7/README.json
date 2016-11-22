@@ -1,5 +1,5 @@
 {
 	"netid" : "qh5",
-	"frontend" : "http://parsimonious-guitar.surge.sh/",
+	"frontend" : "http://mean-exchange.surge.sh/",
 	"backend" : "https://rice-book.herokuapp.com/"
 }
