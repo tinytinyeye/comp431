@@ -1,0 +1,20 @@
+Actually I did not know what I will learn in this class but at the end I have
+learned a lot. I really enjoy learning React and Redux. The philosophy behind
+the combination of React and Redux even affects my thinking of software
+development in other classes. I struggled a lot when I started learning React
+and Redux, but as I understood what is going on between the components and
+the Redux store, the development process speeds up a lot. I think the best part
+of this class is in-class exercise. It really helped me understand some of the
+concepts just taught in class. But since the difficulty between in-class
+exercise vary greatly, some of them may take much longer time to finish than
+others. For example, exercises such as the javascript game paint exercise and
+React-related javascript exercises are pretty hard. When I do the hw5, I did
+lots of research in react and redux to understand how the dispatch and connect
+works. Since the in-class exercise is more like fill in the blanks, they did not
+teach us what these functions are and how they work. If we can have a diagram
+that explains the data flow of redux and react, it will be really helpful. But
+in the same time, I learned a lot by doing the searching by myself. Since the
+most difficult part of homework is the front-end homework, I hope in the future
+there are more lectures and details explaining how Redux and React work together.
+Sometimes video tutorial is not enough. Lastly, thank you for providing such
+a wonderful class!
