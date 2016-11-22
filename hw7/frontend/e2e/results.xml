@@ -1,0 +1,21 @@
+
+> starter@1.0.0 e2e:base /Users/frankiewong/Documents/college/2016Fall/comp431/hw6/frontend
+> mocha --opts e2e/mocha.opts e2e/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="15" failures="0" errors="0" skipped="0" timestamp="Mon, 07 Nov 2016 19:39:44 GMT" time="36.784">
+<testcase classname="Test landing page" name="should register a user" time="2.477"/>
+<testcase classname="Test landing page" name="should log in as the test user" time="3.669"/>
+<testcase classname="Test main page" name="should update headline" time="1.341"/>
+<testcase classname="Test main page" name="should find an article" time="1.216"/>
+<testcase classname="Test main page" name="should add a follower" time="0.665"/>
+<testcase classname="Test main page" name="should remove a follower" time="0.572"/>
+<testcase classname="Test main page" name="should add a new article" time="1.427"/>
+<testcase classname="Test main page" name="should edit an article" time="2.926"/>
+<testcase classname="Test profile page" name="should update email" time="1.188"/>
+<testcase classname="Test profile page" name="should not update email" time="1.145"/>
+<testcase classname="Test profile page" name="should update zipcode" time="1.156"/>
+<testcase classname="Test profile page" name="should not update zipcode" time="1.119"/>
+<testcase classname="Test profile page" name="should update password" time="1.247"/>
+<testcase classname="Test profile page" name="should not update password" time="1.148"/>
+<testcase classname="shutdown" name="now" time="0.139"/>
+</testsuite>
