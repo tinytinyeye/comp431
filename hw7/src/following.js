@@ -34,7 +34,8 @@ const addFollower = (req, res) => {
             let following = user.following
             // If the new follower is not in the following list and is not
             // user himself
-            if (!following.includes(newFollower) && newFollower != username) {
+            if (following.indexOf(newFollower) == -1 &&
+             newFollower != username) {
                 following[following.length] = newFollower
             }
       			user.following = following

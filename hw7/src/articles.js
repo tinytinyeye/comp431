@@ -97,13 +97,19 @@ const editArticle = (req, res) => {
             let comments = newArticle.comments
             // Edit comment
             if (commentId != -1) {
-              const result = comments.filter((c) => (c.commentId == commentId))
+              let result = comments.filter((c) => (c.commentId == commentId))
+              console.log(result)
               if (result.length == 0) {
                 return res.send({ "articles" : [newArticle] })
               } else {
                 if (result[0].author != username) {
                   return res.sendStatus(403)
                 }
+                result[0].text = newText
+                newArticle.comments = [
+                  ...comments.filter((c) => (c.commentId == commentId)),
+                  result[0]
+                ]
               }
               // New comment
             } else {
@@ -114,6 +120,7 @@ const editArticle = (req, res) => {
             }
           }
           // Update database with edited Article object
+          console.log("should update comment")
           updateById(id, newArticle, (article) => {
             console.log("executed")
             return res.send({"articles" : [newArticle]});
