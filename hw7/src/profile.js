@@ -2,6 +2,7 @@
 
 const Profile = require('./model.js').Profile
 
+// Get the profile info of a user by username
 const getUser = (username, callback) => {
      Profile.find({ username: username }).exec((err, user) => {
           if (user.length) {
@@ -16,6 +17,7 @@ const index = (req, res) => {
      res.send({ hello: 'world' })
 }
 
+// Get all the headlines from the provided user list
 const getHeadlines = (req, res) => {
 	const users = req.params.users ? req.params.users.split(',') : req.username
 	Profile.find()
@@ -28,6 +30,7 @@ const getHeadlines = (req, res) => {
 				 })
 }
 
+// Find the current user and change headline
 const putHeadline = (req, res) => {
 	const username = req.username
 	const headline = req.body.headline
@@ -40,6 +43,7 @@ const putHeadline = (req, res) => {
 	})
 }
 
+// Find the email of given user
 const getEmail = (req, res) => {
 	const username = req.params.user ? req.params.user : req.username
 	getUser(username, (user) => {
@@ -52,6 +56,7 @@ const getEmail = (req, res) => {
 	})
 }
 
+// Change the email of given user
 const putEmail = (req, res) => {
 	const username = req.username
 	const email = req.body.email
@@ -64,6 +69,7 @@ const putEmail = (req, res) => {
 	})
 }
 
+// Get the zipcode of current user
 const getZipcode = (req, res) => {
 	const username = req.params.user ? req.params.user : req.username
 	getUser(username, (user) => {
@@ -76,6 +82,7 @@ const getZipcode = (req, res) => {
 	})
 }
 
+// Change the zipcode of current user
 const putZipcode = (req, res) => {
 	const username = req.username
 	const zipcode = req.body.zipcode
@@ -88,6 +95,7 @@ const putZipcode = (req, res) => {
 	})
 }
 
+// Get the date of birth of current user
 const getDob = (req, res) => {
 	const username = req.username
 	getUser(username, (user) => {
@@ -96,6 +104,7 @@ const getDob = (req, res) => {
 	})
 }
 
+// Get all the avatars from the provided userlist
 const getAvatars = (req, res) => {
 	const users = req.params.users ? req.params.users.split(',') : req.username
 	Profile.find()
@@ -108,6 +117,7 @@ const getAvatars = (req, res) => {
 				 })
 }
 
+// Update an avatar, just a stub now.
 const putAvatar = (req, res) => {
 	res.send({ username : profile.username, avatar : 'c.jpg' })
 }

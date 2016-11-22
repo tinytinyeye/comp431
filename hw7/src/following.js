@@ -32,6 +32,8 @@ const addFollower = (req, res) => {
       if (follower) {
         getUser(username, (user) => {
             let following = user.following
+            // If the new follower is not in the following list and is not
+            // user himself
             if (!following.includes(newFollower) && newFollower != username) {
                 following[following.length] = newFollower
             }
@@ -42,6 +44,7 @@ const addFollower = (req, res) => {
       		    })
       	})
       } else {
+        // If the follower is not existed
         getUser(username, (user) => {
             let following = user.following
             return res.send({ username, following })

@@ -1,8 +1,8 @@
 {
-     "dummy_username": "sep1test",
-     "dummy_password": "native-web-tester",
+     "dummy_username": "qh5test",
+     "dummy_password": "measure-kill-house",
      "dummy_url": "https://webdev-dummy.herokuapp.com",
-     "site_username": "qh5test",
-     "site_password": "measure-kill-house",
+     "site_username": "sep1test",
+     "site_password": "native-web-tester",
      "site_url": "http://localhost:4000"
 }

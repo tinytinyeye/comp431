@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
 
 const profileSchema = new mongoose.Schema({
 	username: String, headline: String, following: [ String ], email: String,
-	zipcode: String, avatar: String, dob: Number
+	zipcode: String, avatar: String, dob: Date
 })
 
 exports.Article = mongoose.model('posts', articleSchema)

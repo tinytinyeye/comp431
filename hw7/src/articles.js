@@ -8,6 +8,7 @@ const Article = require('./model.js').Article
 const Profile = require('./model.js').Profile
 const Comment = require('./model.js').Comment
 
+// Get the profile info of a user by username
 const getUser = (username, callback) => {
      Profile.find({ username: username }).exec((err, user) => {
           if (user.length) {
@@ -64,8 +65,8 @@ const addArticle = (req, res) => {
         author  : req.username,
         text    : req.body.text,
         date    : new Date().toISOString(),
-        img     : null,
-        comment : []
+        img     : req.body.image,
+        comments : req.body.comments
       }
      new Article(newArticle).save()
      return res.send({"articles" : [newArticle]})
@@ -75,46 +76,37 @@ const addArticle = (req, res) => {
   * Edit an article in database
   */
 const editArticle = (req, res) => {
-
      const id = req.params.id
      const newText = req.body["text"]
      const commentId = req.body["commentId"]
      const username = req.username
-
      findById(id, (article) => {
         // If no article is found, send internal server error
         if (article.length > 1) {
           return res.sendStatus(500)
         } else {
           let newArticle = article[0]
-          // Update article if commenId does not exist
           if (!commentId) {
-            // If the user does not own this article,
-            // send forbidden status
+            // If the user does not own this article
             if (newArticle.author !== username) {
               return res.sendStatus(403)
             }
-            // Replace the text with new text
             newArticle.text = newText
             // Update comment if commentId exists
           } else {
             let comments = newArticle.comments
             // Edit comment
             if (commentId != -1) {
-              comments.forEach((comment) => {
-                if (comment.commentId === commentId) {
-                  // If user does not own this comment,
-                  // send forbidden status
-                  if (comment.author !== username) {
-                    return res.sendStatus(403)
-                  }
-                  // Replace the comment with new comment
-                  comment.text = newText
+              const result = comments.filter((c) => (c.commentId == commentId))
+              if (result.length == 0) {
+                return res.send({ "articles" : [newArticle] })
+              } else {
+                if (result[0].author != username) {
+                  return res.sendStatus(403)
                 }
-              })
+              }
               // New comment
             } else {
-              // Create global unique comment id
               const newCommentId = md5(username + new Date().getTime())
               const newComment = { commentId : newCommentId, text : newText,
               date : new Date().toISOString(), author : username }
@@ -123,6 +115,7 @@ const editArticle = (req, res) => {
           }
           // Update database with edited Article object
           updateById(id, newArticle, (article) => {
+            console.log("executed")
             return res.send({"articles" : [newArticle]});
           })
         }

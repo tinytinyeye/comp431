@@ -30,11 +30,11 @@ const register = (req, res) => {
      const zipcode = req.body.zipcode
      const avatar = "https://goo.gl/n7uZww"
      const headline = "Become a web developer"
-     const dob = Date.parse("March 21, 2012")
+     const dob = req.body.dob
      const following = []
      const salt = Math.random()
      const hash = md5(password + salt)
-     if (!username || !password || !email || !zipcode) {
+     if (!username || !password || !email || !zipcode || !dob ) {
        return res.sendStatus(400)
      } else {
        getUser(username, (user) => {
