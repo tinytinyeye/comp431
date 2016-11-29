@@ -1,0 +1,21 @@
+1. Progressive Web Apps was the one that was the most polished and delivered.
+The reason is that compared with other slides, the use of Prezi creates lots
+of cool visual effects and attract audiences attentions. The layout of the
+materials are also pretty decent so that each slide will not contain too much
+text.
+
+2. The topic I learned most from is Java Spring MVC because this semester I was
+mostly dealing with Java and MVC and I used Spark in Java in my previous class
+before. So the appearance of Java Spring MVC made me know that there is one
+more option to build backend with Java. I learned that even with Java as our
+backend, we can also use Java Spring MVC to integrate with some well-known
+services such as MongoDB.
+
+3. My favorite talk is Hybrid Mobile Apps. The reason is that hybrid mobile
+app is more and more popular right now. Apps like Instagram and Yelp are
+actually a combination of a native container and a web wiew. Before listening
+to this talk, I thought all the elements of these apps are native. However,
+they are actually hybrid and works perfectly across different platforms. It
+is good to hear that in the future I may be able to write mobile apps in
+Javascript and combine some of the native functions such as push notifications
+like what the talk said.
