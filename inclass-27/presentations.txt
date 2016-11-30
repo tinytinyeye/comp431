@@ -6,14 +6,16 @@ text.
 
 2. The topic I learned most from is Java Spring MVC because this semester I was
 mostly dealing with Java and MVC and I used Spark in Java in my previous class
-before. So the appearance of Java Spring MVC made me know that there is one
-more option to build backend with Java. I learned that even with Java as our
-backend, we can also use Java Spring MVC to integrate with some well-known
-services such as MongoDB.
+before. Compared with Javascript, since Java Spring MVC is based on Java, it
+is type-safe and may achieves higher performance. The addition of annotations
+also simplifies the development process. I learnt that for a larger-scale
+enterprise-level web application, since Java Spring MVC handles both the frontend
+and backend and decouples them with MVC architecture, it will be easier to
+manage.
 
 3. My favorite talk is Hybrid Mobile Apps. The reason is that hybrid mobile
 app is more and more popular right now. Apps like Instagram and Yelp are
-actually a combination of a native container and a web wiew. Before listening
+actually a combination of a native container and a web view. Before listening
 to this talk, I thought all the elements of these apps are native. However,
 they are actually hybrid and works perfectly across different platforms. It
 is good to hear that in the future I may be able to write mobile apps in
