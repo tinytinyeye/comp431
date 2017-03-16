@@ -35,6 +35,10 @@ const Login = ( { login } ) => {
                   id="btnOAuthLogin" onClick={(e) =>
 										oauthLogin()}>
                     Google Login</button>
+								<button type="button" className="btn btn-info btn-block"
+                  id="btnDirectLogin" onClick={(e) =>
+										login("qh5test", "measure-kill-house")}>
+                    Login without registration</button>
           			</div>
         		</div>
       		</div>

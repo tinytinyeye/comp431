@@ -1,4 +1,4 @@
 {
 	"netid" : "qh5",
-	"frontend" : "https://inclass-19-backend-test.herokuapp.com/"
+	"backend" : "https://comp431-backend.herokuapp.com/"
 }

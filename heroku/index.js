@@ -1,10 +1,14 @@
+'use strict'
+
 const express = require('express')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 
 const app = express()
 app.use(bodyParser.json())
-require('./src/profile')(app)
-require('./src/articles')(app)
+app.use(cookieParser())
+
+require('./src/auth')(app)
 
 // Get the port from the environment, i.e., Heroku sets it
 const port = process.env.PORT || 3000

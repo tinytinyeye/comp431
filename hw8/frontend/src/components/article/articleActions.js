@@ -154,6 +154,9 @@ export const filterByKeyword = (article, keyword) => {
 		return true
 	} else {
 		keyword = keyword.toLowerCase()
+		console.log(article)
+		console.log(article.author)
+		console.log(article.text)
 		if ((article.author.toLowerCase().indexOf(keyword) != -1) ||
 			(article.text.toLowerCase().indexOf(keyword)) != -1) {
 			return true

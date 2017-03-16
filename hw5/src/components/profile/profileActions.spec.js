@@ -103,6 +103,7 @@ describe('fetch profile info', () => {
 		})		
 
 		fetchProfile()(action => {
+			console.log()
 			switch (action.type) {
 				case "UPDATE_AVATAR":
 					expect(action.avatar).to.equal('a.jpg')

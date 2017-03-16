@@ -1,5 +1,5 @@
 {
 	"netid" : "qh5",
-	"frontend" : "http://melodic-rod.surge.sh/",
+	"frontend" : "http://sore-cake.surge.sh/",
 	"backend" : "https://ricebook-server.herokuapp.com/"
 }

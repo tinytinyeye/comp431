@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { validateProfile } from './profileActions'
 import { AlertMsg } from '../auth/landing'
+import { handleImageChange } from './avatarActions'
 
 // Display user profile info and allow user to edit
 const ProfileForm = ( {oldEmail, oldZipcode, birthday, avatar, 
@@ -12,8 +13,9 @@ const ProfileForm = ( {oldEmail, oldZipcode, birthday, avatar,
 		<div className="row">
 			<div className="col-sm-6 col-md-6">
 				<img src={ avatar } className="img-circle center-block"/>
-				<input type="file" name="file" id="profileImg" 
-				className="inputfile" />
+				<input type="file" accept="image/*" 
+				name="file" id="profileImg" className="inputfile" 
+				onChange={(e) => handleImageChange(e)}/>
 				<label htmlFor="profileImg" 
 				className="btn btn-info btn-block">Upload</label>
 				<h4>Current info:</h4>
